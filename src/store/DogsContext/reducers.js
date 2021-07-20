@@ -12,15 +12,14 @@ export const reducer = (state, action) => {
       return {
         ...state,
         filter: action.payload
-      }
+      };
     case ACTIONS.SET_FILTERED_BREEDS:
       const filteredBreeds = state.dogBreeds.filter(breed => breed.startsWith(state.filter))
       return {
         ...state,
         filteredBreeds
-      }
-
+      };
     default:
       return;
-  }
+  };
 };

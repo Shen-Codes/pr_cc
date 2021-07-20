@@ -1,22 +1,22 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react';
 import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
 import { Home, DogImages } from './pages';
-import './App.css';
 import { DogsContext } from './store/DogsContext';
 import { arrayifyJson } from './utils';
+import './App.css';
 
 function App() {
-  const { setList } = useContext(DogsContext)
+  const { setList } = useContext(DogsContext);
 
   useEffect(() => {
     const fetchDogs = async () => {
-      const res = await fetch('https://dog.ceo/api/breeds/list/all')
-      const data = await res.json()
-      const arrayOfData = arrayifyJson(data.message)
-      setList(arrayOfData)
+      const res = await fetch('https://dog.ceo/api/breeds/list/all');
+      const data = await res.json();
+      const arrayOfData = arrayifyJson(data.message);
+      setList(arrayOfData);
     }
-    fetchDogs()
-  }, [])
+    fetchDogs();
+  }, []);
 
   return (
     <div className="App">
@@ -35,6 +35,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

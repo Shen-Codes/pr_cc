@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { BackButton, DogImage } from '../../components';
-import './dog-images.css'
+import './dog-images.css';
 
 export const DogImages = () => {
   const { breed } = useParams();
   const paramSplit = breed.split(' ');
-  const fourArray = new Array(4).fill(paramSplit)
+  const fourArray = new Array(4).fill(paramSplit);
 
   return (
     <div>
@@ -14,10 +14,10 @@ export const DogImages = () => {
         {fourArray.map((paramSplit, idx) => {
           return (
             <DogImage params={paramSplit} key={idx}/>
-          )
+          );
         })}
       </div>  
       <BackButton />
     </div>
-  )
-}
+  );
+};

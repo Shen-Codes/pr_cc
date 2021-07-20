@@ -1,6 +1,6 @@
 import React, {createContext, useReducer} from 'react';
-import * as ACTIONS from './actions'
-import { reducer } from './reducers'
+import * as ACTIONS from './actions';
+import { reducer } from './reducers';
 
 export const InitialState = {
   dogBreeds: [],
@@ -14,13 +14,13 @@ export const DogsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, InitialState);
 
   const setList = list => {
-    dispatch(ACTIONS.SetList(list))
+    dispatch(ACTIONS.SetList(list));
   };
   const setFilter = filter => {
-    dispatch(ACTIONS.SetFilter(filter))
+    dispatch(ACTIONS.SetFilter(filter));
   };
   const setFilteredBreeds = () => {
-    dispatch(ACTIONS.SetFilteredBreeds())
+    dispatch(ACTIONS.SetFilteredBreeds());
   };
 
 
@@ -38,5 +38,5 @@ export const DogsContextProvider = ({ children }) => {
     <DogsContext.Provider value={contextValue}>
       {children}
     </DogsContext.Provider>
-  )
+  );
 };

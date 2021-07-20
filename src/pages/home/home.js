@@ -1,14 +1,14 @@
 import React, { useContext, useEffect } from 'react'
 import { BreedName, FilterBar } from '../../components';
 import { DogsContext } from '../../store/DogsContext';
-import './home.css'
+import './home.css';
 
 export const Home = () => {
   const { filter, setFilteredBreeds, filteredBreeds } = useContext(DogsContext);
 
   useEffect(() => {
-    setFilteredBreeds()
-  }, [filter])
+    setFilteredBreeds();
+  }, [filter]);
 
 
   return (
@@ -20,9 +20,9 @@ export const Home = () => {
         {filteredBreeds.map(breed => {
           return (
             <BreedName breed={breed} key={breed}/>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};

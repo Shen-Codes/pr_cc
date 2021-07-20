@@ -5,20 +5,20 @@ export const SET_FILTERED_BREEDS = "SET_FILTERED_BREEDS";
 export const SetList = list => {
   return {
     type: SET_LIST,
-    payload: list
-  }
-}
+    payload: list,
+  };
+};
 
 export const SetFilter = filter => {
   return {
     type: SET_FILTER,
-    payload: filter
-  }
-}
+    payload: filter,
+  };
+};
 
 export const SetFilteredBreeds = () => {
   return {
     type: SET_FILTERED_BREEDS
-  }
-}
+  };
+};
 

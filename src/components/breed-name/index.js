@@ -1,1 +1,1 @@
-export * from './breed-name'
+export * from './breed-name';
