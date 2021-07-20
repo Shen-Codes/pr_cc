@@ -1,10 +1,9 @@
 import React, { useContext, useEffect } from 'react'
-import BreedName from '../components/breed-name';
-import SearchBar from '../components/search-bar';
-import { DogsContext } from '../store/context';
+import { BreedName, FilterBar } from '../../components';
+import { DogsContext } from '../../store/DogsContext';
 import './home.css'
 
-const Home = () => {
+export const Home = () => {
   const { filter, setFilteredBreeds, filteredBreeds } = useContext(DogsContext);
 
   useEffect(() => {
@@ -16,7 +15,7 @@ const Home = () => {
     <div>
       <h1>Click on a dog breed to see 4 random images</h1>
       <span>Filter</span>
-      <SearchBar />
+      <FilterBar />
       <div id="list-of-breeds">
         {filteredBreeds.map(breed => {
           return (
@@ -27,7 +26,3 @@ const Home = () => {
     </div>
   )
 }
-
-
-
-export default Home

@@ -10,7 +10,7 @@ export const InitialState = {
 
 export const DogsContext = createContext(InitialState);
 
-const DogsContextProvider = ({ children }) => {
+export const DogsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, InitialState);
 
   const setList = list => {
@@ -32,13 +32,11 @@ const DogsContextProvider = ({ children }) => {
     setList,
     setFilter,
     setFilteredBreeds,
-  }
+  };
 
   return (
     <DogsContext.Provider value={contextValue}>
       {children}
     </DogsContext.Provider>
   )
-}
-
-export default DogsContextProvider
+};

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import './breed-name.css';
 
-const BreedName = props => {
+export const BreedName = props => {
   let breedName = "";
   const { breed } = props;
   switch (breed) {
@@ -29,5 +29,3 @@ const BreedName = props => {
     </div>
   );
 };
-
-export default BreedName;

@@ -1,9 +1,8 @@
 import React, { useContext, useEffect } from 'react'
 import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
-import Home from './pages/home'
+import { Home, DogImages } from './pages';
 import './App.css';
-import DogImages from './pages/dog-images';
-import { DogsContext } from './store/context';
+import { DogsContext } from './store/DogsContext';
 import { arrayifyJson } from './utils';
 
 function App() {

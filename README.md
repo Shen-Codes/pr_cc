@@ -18,7 +18,8 @@ Child components
 **Home page Pseudo code**
 ```
 const HomePage = props => {
-  
+  useEffect - filter dog breeds
+
   return (
     h1 - Choose Breed to See Random Images
     <Search Bar>
@@ -101,3 +102,4 @@ the image itself will take care of the random api fetch and handle its own local
 this solution is sufficient since the app is small.
 Will have state for list of dogs, filter keyword
 
+Provider is set at very top level of the app. Initial api call to load dogs will be called and dogslist state set at App.js

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { DogsContext } from '../store/context';
+import { DogsContext } from '../../store/DogsContext';
 
-const SearchBar = () => {
+export const FilterBar = () => {
   const { setFilter, filter } = useContext(DogsContext)
   const handleChange = e => {
     e.preventDefault();
@@ -19,5 +19,3 @@ const SearchBar = () => {
     </div>
   )
 }
-
-export default SearchBar

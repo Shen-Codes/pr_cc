@@ -1,13 +1,13 @@
 export const arrayifyJson = data => {
-  const arrayOfBreeds = []
+  const arrayOfBreeds = [];
   Object.keys(data).forEach(breed => {
     if(data[breed].length > 0) {
       data[breed].forEach(subBreed => {
-        arrayOfBreeds.push(`${subBreed} ${breed}`)
+        arrayOfBreeds.push(`${subBreed} ${breed}`);
       })
     } else { 
-      arrayOfBreeds.push(breed)
+      arrayOfBreeds.push(breed);
     }
   })
   return arrayOfBreeds
-}
+};

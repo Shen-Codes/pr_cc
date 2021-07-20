@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const DogImage = props => {
+export const DogImage = props => {
   const { params } = props
   const [image, setImage] = useState()
   const [isLoading, setIsLoading] = useState(false)
@@ -23,5 +23,3 @@ const DogImage = props => {
     </div>
   )
 }
-
-export default DogImage

@@ -1,10 +1,9 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import BackButton from '../components/back-button'
-import DogImage from '../components/dog-image';
+import { BackButton, DogImage } from '../../components';
 import './dog-images.css'
 
-const DogImages = () => {
+export const DogImages = () => {
   const { breed } = useParams();
   const paramSplit = breed.split(' ');
   const fourArray = new Array(4).fill(paramSplit)
@@ -22,5 +21,3 @@ const DogImages = () => {
     </div>
   )
 }
-
-export default DogImages
