@@ -11,9 +11,9 @@ export const DogImages = () => {
   return (
     <div>
       <div id="image-container">
-        {fourArray.map(paramSplit => {
+        {fourArray.map((paramSplit, idx) => {
           return (
-            <DogImage params={paramSplit} />
+            <DogImage params={paramSplit} key={idx}/>
           )
         })}
       </div>  

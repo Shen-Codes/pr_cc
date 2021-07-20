@@ -103,3 +103,6 @@ this solution is sufficient since the app is small.
 Will have state for list of dogs, filter keyword
 
 Provider is set at very top level of the app. Initial api call to load dogs will be called and dogslist state set at App.js
+
+## Folder Structure
+Will use the barrel method for the folder structure. This should allow future devs to add exportable functions or components without worrying about explicit exports
