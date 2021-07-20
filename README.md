@@ -2,7 +2,7 @@ Project is bootstrapped with Create-react-app.
 
 To run locally, clone the repo, run npm install, then npm start.
 
-Visit ___ for project mounted to Firebase.
+Visit https://pr-cc-2e289.web.app/home for project mounted to Firebase.
 
 ---
 
