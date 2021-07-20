@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './dog-image.css'
 
 export const DogImage = props => {
   const { params } = props;
