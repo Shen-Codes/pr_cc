@@ -1,4 +1,4 @@
-const arrayifyJson = data => {
+export const arrayifyJson = data => {
   const arrayOfBreeds = [];
   Object.keys(data).forEach(breed => {
     if(data[breed].length > 0) {
@@ -11,5 +11,3 @@ const arrayifyJson = data => {
   });
   return arrayOfBreeds;
 };
-
-export default arrayifyJson;
