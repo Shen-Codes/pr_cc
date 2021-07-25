@@ -1,4 +1,8 @@
-export const arrayifyJson = data => {
+export type DataType = {
+  [key: string]: string[]
+}
+
+export const arrayifyJson = (data: DataType) => {
   const arrayOfBreeds = [];
   Object.keys(data).forEach(breed => {
     if(data[breed].length > 0) {

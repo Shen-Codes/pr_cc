@@ -1,6 +1,9 @@
-import * as ACTIONS from './actions'
+import * as ACTIONS from './actions';
+import { State } from './context';
+import { Action } from './actions';
 
-export const reducer = (state, action) => {
+
+export const reducer = (state: State, action: Action) => {
   switch (action.type) {
     case ACTIONS.SET_LIST:
       return {
@@ -19,6 +22,11 @@ export const reducer = (state, action) => {
         ...state,
         filteredBreeds
       };
+    case ACTIONS.SET_ERROR:
+      return {
+        ...state,
+        error: action.payload
+      }
     default:
       return;
   };

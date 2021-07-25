@@ -6,14 +6,18 @@ import { arrayifyJson } from './utils';
 import './App.css';
 
 function App() {
-  const { setList } = useContext(DogsContext);
+  const { setList, setError } = useContext(DogsContext);
 
   useEffect(() => {
     const fetchDogs = async () => {
-      const res = await fetch('https://dog.ceo/api/breeds/list/all');
-      const data = await res.json();
-      const arrayOfData = arrayifyJson(data.message);
-      setList(arrayOfData);
+      try{
+        const res = await fetch('https://dog.ceo/api/breeds/list/all');
+        const data = await res.json();
+        const arrayOfData = arrayifyJson(data.message);
+        setList(arrayOfData);
+      } catch (error) {
+        setError(error)
+      }
     }
     fetchDogs();
   }, []);

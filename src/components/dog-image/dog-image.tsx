@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, FC } from 'react';
 import './dog-image.css'
 
-export const DogImage = props => {
+export type DogProps = {
+  params: String,
+}
+
+export const DogImage: FC<DogProps> = (props: DogProps) => {
   const { params } = props;
-  const [image, setImage] = useState();
-  const [isLoading, setIsLoading] = useState(false);
+  const [image, setImage] = useState<string>();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const getImage = async () => {

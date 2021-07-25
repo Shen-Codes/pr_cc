@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, FC } from 'react';
 import { DogsContext } from '../../store/DogsContext';
 
-export const FilterBar = () => {
+export const FilterBar: FC = () => {
   const { setFilter, filter } = useContext(DogsContext);
   const handleChange = e => {
     e.preventDefault();
